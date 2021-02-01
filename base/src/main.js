@@ -2,7 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import { registerApplication, start } from 'single-spa'
-import './example/importHTML.js'
+import './importHTML.js'
 
 
 Vue.config.productionTip = false

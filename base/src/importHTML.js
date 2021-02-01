@@ -42,9 +42,11 @@ const proxy = new Proxy(window, {
     }
 })
 
+
 window.addEventListener('popstate', function (a, b) {
+
     if (window.location.pathname === '/app1') {
-        importHTML('http://127.0.0.1:8083').then(res => {
+        importHTML('http://127.0.0.1:8888').then(res => {
             // 执行子应用代码
             res.execScripts(proxy).then(exports => {
                 console.log(exports)
@@ -56,4 +58,6 @@ window.addEventListener('popstate', function (a, b) {
             delete rawWindow[key]
         }
     }
+
+    
 })

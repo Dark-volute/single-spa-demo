@@ -4,7 +4,10 @@ module.exports = {
   publicPath: '//localhost:8888',
   // 开发服务器
   devServer: {
-    port: 8888
+    port: 8888,
+    headers: {
+      "Access-Control-Allow-Origin": "*"
+    }
   },
   configureWebpack: {
     // 导出umd格式的包，在全局对象上挂载属性package.name，基座应用需要通过这个全局对象获取一些信息，比如子应用导出的生命周期函数
